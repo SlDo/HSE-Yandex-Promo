@@ -65,6 +65,7 @@
 }
 
 .question__answer {
+  white-space: pre-wrap;
   margin-top: var(--gap-small-x);
 }
 
