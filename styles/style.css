@@ -107,7 +107,7 @@
 .question.open .question__answer {
   transition: opacity .5s ease, max-height 0.5s ease;
   opacity: 1;
-  max-height: 200px;
+  max-height: 400px;
   height: auto;
 }
 
