@@ -66,12 +66,13 @@
 
 .question__answer {
   white-space: pre-wrap;
+  padding-right: var(--gap-xl);
   margin-top: var(--gap-small-x);
 }
 
 .question__title:after {
   content: '';
-  transition: 0.5s;
+  transition: 0.25s;
   position: absolute;
   right: 0;
   top: 0;
@@ -85,7 +86,7 @@
 
 .question.open .question__title:after {
   content: '';
-  transition: 0.5s;
+  transition: 0.25s;
   position: absolute;
   right: 0;
   top: 0;
