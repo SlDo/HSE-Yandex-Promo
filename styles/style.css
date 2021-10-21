@@ -1,0 +1,119 @@
+:root {
+  --gap-small: 8px;
+  --gap-small-x: 12px;
+  --gap-x: 21px;
+  --gap-xl: 24px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'SF Pro Text', sans-serif;
+}
+
+.title {
+  font-size: 1.25rem;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 20px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: var(--gap-xl) var(--gap-small);
+}
+
+.logo {
+  height: 30px;
+}
+
+.page > *:not(:last-child) {
+  margin-bottom: var(--gap-xl);
+}
+
+.section {
+  padding: 0 var(--gap-x);
+  max-width: 560px;
+}
+
+.section > *:not(:last-child) {
+  margin-bottom: var(--gap-x);
+}
+
+.section__main-image {
+  width: 100%;
+}
+
+.question {
+  position: relative;
+  cursor: pointer;
+}
+
+.question__title {
+  font-size: 1rem;
+  position: relative;
+  padding-right: var(--gap-xl);
+}
+
+.question__answer {
+  margin-top: var(--gap-small-x);
+}
+
+.question__title:after {
+  content: '';
+  transition: 0.5s;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  transform: rotate(0deg);
+  background-image: url('../images/arrow.svg');
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.question.open .question__title:after {
+  content: '';
+  transition: 0.5s;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(180deg);
+  display: inline-block;
+  background-image: url('../images/arrow.svg');
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.question.close .question__answer {
+  transition: opacity .15s ease, max-height 0.5s ease-out;
+  opacity: 0;
+  max-height: 0;
+}
+
+.question.open .question__answer {
+  transition: max-height 0.5s ease-out;
+  opacity: 1;
+  max-height: 250px;
+  height: auto;
+}
+
+#questions > .question:not(:first-child) {
+  border-top: 1px solid #F2F2F2;
+  padding-top: var(--gap-x);
+}
+
+#questions > .question:not(:last-child) {
+  padding-bottom: var(--gap-x);
+}
