@@ -63,10 +63,8 @@ const createQuestion = (question, answer) => {
   container.appendChild(questionBlock);
   container.appendChild(answerText);
 
-  let isOpen = false;
-
   questionBlock.addEventListener('click', () => {
-    isOpen = !isOpen;
+    const isOpen = container.classList.contains('open');
 
     container.classList.remove(isOpen ? 'open' : 'close');
     container.classList.add(!isOpen ? 'open' : 'close');
