@@ -99,15 +99,15 @@
 }
 
 .question.close .question__answer {
-  transition: opacity .5s ease, max-height 0.5s ease-out;
+  transition: opacity .5s ease, max-height 0.5s ease;
   opacity: 0;
   max-height: 0;
 }
 
 .question.open .question__answer {
-  transition: max-height 0.5s ease-out;
+  transition: opacity .5s ease, max-height 0.5s ease;
   opacity: 1;
-  max-height: 250px;
+  max-height: 200px;
   height: auto;
 }
 
